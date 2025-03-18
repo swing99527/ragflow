@@ -5,7 +5,7 @@ import { appName } from './src/conf.json';
 import routes from './src/routes';
 
 export default defineConfig({
-  title: appName,
+  title: 'DeepKnow',
   outputPath: 'dist',
   alias: { '@parent': path.resolve(__dirname, '../') },
   npmClient: 'npm',
@@ -38,7 +38,7 @@ export default defineConfig({
   proxy: [
     {
       context: ['/api', '/v1'],
-      target: 'http://127.0.0.1:9380/',
+      target: 'http://192.168.8.109:9380/',
       changeOrigin: true,
       ws: true,
       logger: console,

@@ -161,7 +161,7 @@ const Login = () => {
                     Sign in with Google
                   </div>
                 </Button> */}
-                {location.host === Domain && (
+                {/* {location.host === Domain && (
                   <Button
                     block
                     size="large"
@@ -176,7 +176,7 @@ const Login = () => {
                       Sign in with Github
                     </div>
                   </Button>
-                )}
+                )} */}
               </>
             )}
           </Form>

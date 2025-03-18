@@ -1,0 +1,182 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="1440" height="1024" viewBox="0 0 1440 1024" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <!-- 更明亮的渐变背景 -->
+    <linearGradient id="bgGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#040F2D;stop-opacity:1" />
+      <stop offset="50%" style="stop-color:#132454;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#0A2472;stop-opacity:1" />
+    </linearGradient>
+    
+    <!-- 更明亮的连接线渐变 -->
+    <linearGradient id="connectionGradient" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#00BFFF;stop-opacity:0.4" />
+      <stop offset="100%" style="stop-color:#00FFFF;stop-opacity:0.8" />
+    </linearGradient>
+    
+    <!-- 更明亮的节点渐变 -->
+    <radialGradient id="nodeGradient" cx="50%" cy="50%" r="50%" fx="50%" fy="50%">
+      <stop offset="0%" style="stop-color:#64FFDA;stop-opacity:0.9" />
+      <stop offset="100%" style="stop-color:#00B8D4;stop-opacity:0.6" />
+    </radialGradient>
+    
+    <!-- 更强的粒子效果 -->
+    <filter id="glow" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="3" result="coloredBlur"/>
+      <feMerge>
+        <feMergeNode in="coloredBlur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+    
+    <!-- 网格图案 -->
+    <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse">
+      <path d="M 40 0 L 0 0 0 40" fill="none" stroke="#0288D1" stroke-width="0.5" opacity="0.3"/>
+    </pattern>
+    
+    <!-- 数字雨效果 -->
+    <linearGradient id="digitalRain" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#00FF00;stop-opacity:0.7" />
+      <stop offset="100%" style="stop-color:#00FF00;stop-opacity:0" />
+    </linearGradient>
+  </defs>
+  
+  <!-- 背景 -->
+  <rect width="100%" height="100%" fill="url(#bgGradient)"/>
+  
+  <!-- 网格背景 -->
+  <rect width="100%" height="100%" fill="url(#grid)" opacity="0.15"/>
+  
+  <!-- 科技感圆环 -->
+  <circle cx="720" cy="512" r="400" fill="none" stroke="#00E5FF" stroke-width="1" opacity="0.2"/>
+  <circle cx="720" cy="512" r="300" fill="none" stroke="#00E5FF" stroke-width="1" opacity="0.3"/>
+  <circle cx="720" cy="512" r="200" fill="none" stroke="#00E5FF" stroke-width="1" opacity="0.4"/>
+  
+  <!-- 旋转的科技环 -->
+  <g opacity="0.6">
+    <circle cx="720" cy="512" r="350" fill="none" stroke="url(#connectionGradient)" stroke-width="2" stroke-dasharray="10,15"/>
+    <circle cx="720" cy="512" r="250" fill="none" stroke="url(#connectionGradient)" stroke-width="2" stroke-dasharray="15,10" transform="rotate(45 720 512)"/>
+    <circle cx="720" cy="512" r="150" fill="none" stroke="url(#connectionGradient)" stroke-width="2" stroke-dasharray="5,10" transform="rotate(90 720 512)"/>
+  </g>
+  
+  <!-- 抽象数据流和连接线 -->
+  <g opacity="0.7">
+    <!-- 水平数据流 -->
+    <path d="M0,200 C480,150 960,250 1440,200" stroke="url(#connectionGradient)" stroke-width="2" fill="none"/>
+    <path d="M0,400 C480,350 960,450 1440,400" stroke="url(#connectionGradient)" stroke-width="2.5" fill="none"/>
+    <path d="M0,600 C480,550 960,650 1440,600" stroke="url(#connectionGradient)" stroke-width="2" fill="none"/>
+    <path d="M0,800 C480,750 960,850 1440,800" stroke="url(#connectionGradient)" stroke-width="2.5" fill="none"/>
+    
+    <!-- 垂直数据流 -->
+    <path d="M300,0 C250,341 350,683 300,1024" stroke="url(#connectionGradient)" stroke-width="2" fill="none"/>
+    <path d="M600,0 C550,341 650,683 600,1024" stroke="url(#connectionGradient)" stroke-width="2.5" fill="none"/>
+    <path d="M900,0 C850,341 950,683 900,1024" stroke="url(#connectionGradient)" stroke-width="2" fill="none"/>
+    <path d="M1200,0 C1150,341 1250,683 1200,1024" stroke="url(#connectionGradient)" stroke-width="2.5" fill="none"/>
+  </g>
+  
+  <!-- 神经网络节点 - 更明亮 -->
+  <g filter="url(#glow)">
+    <!-- 第一行节点 -->
+    <circle cx="300" cy="200" r="8" fill="url(#nodeGradient)"/>
+    <circle cx="600" cy="200" r="12" fill="url(#nodeGradient)"/>
+    <circle cx="900" cy="200" r="8" fill="url(#nodeGradient)"/>
+    <circle cx="1200" cy="200" r="10" fill="url(#nodeGradient)"/>
+    
+    <!-- 第二行节点 -->
+    <circle cx="300" cy="400" r="10" fill="url(#nodeGradient)"/>
+    <circle cx="600" cy="400" r="8" fill="url(#nodeGradient)"/>
+    <circle cx="900" cy="400" r="12" fill="url(#nodeGradient)"/>
+    <circle cx="1200" cy="400" r="8" fill="url(#nodeGradient)"/>
+    
+    <!-- 第三行节点 -->
+    <circle cx="300" cy="600" r="8" fill="url(#nodeGradient)"/>
+    <circle cx="600" cy="600" r="10" fill="url(#nodeGradient)"/>
+    <circle cx="900" cy="600" r="8" fill="url(#nodeGradient)"/>
+    <circle cx="1200" cy="600" r="12" fill="url(#nodeGradient)"/>
+    
+    <!-- 第四行节点 -->
+    <circle cx="300" cy="800" r="12" fill="url(#nodeGradient)"/>
+    <circle cx="600" cy="800" r="8" fill="url(#nodeGradient)"/>
+    <circle cx="900" cy="800" r="10" fill="url(#nodeGradient)"/>
+    <circle cx="1200" cy="800" r="8" fill="url(#nodeGradient)"/>
+    
+    <!-- 额外的节点 -->
+    <circle cx="450" cy="300" r="6" fill="url(#nodeGradient)"/>
+    <circle cx="750" cy="250" r="7" fill="url(#nodeGradient)"/>
+    <circle cx="1050" cy="350" r="5" fill="url(#nodeGradient)"/>
+    <circle cx="450" cy="500" r="7" fill="url(#nodeGradient)"/>
+    <circle cx="750" cy="450" r="6" fill="url(#nodeGradient)"/>
+    <circle cx="1050" cy="550" r="8" fill="url(#nodeGradient)"/>
+    <circle cx="450" cy="700" r="5" fill="url(#nodeGradient)"/>
+    <circle cx="750" cy="650" r="8" fill="url(#nodeGradient)"/>
+    <circle cx="1050" cy="750" r="6" fill="url(#nodeGradient)"/>
+  </g>
+  
+  <!-- 数字矩阵 - 更明亮的绿色 -->
+  <g opacity="0.25" fill="#00FF00">
+    <text x="100" y="150" font-family="monospace" font-size="12">10010110 01101001 10100101</text>
+    <text x="800" y="250" font-family="monospace" font-size="12">01101001 10100101 10010110</text>
+    <text x="200" y="350" font-family="monospace" font-size="12">10100101 10010110 01101001</text>
+    <text x="900" y="450" font-family="monospace" font-size="12">10010110 01101001 10100101</text>
+    <text x="300" y="550" font-family="monospace" font-size="12">01101001 10100101 10010110</text>
+    <text x="1000" y="650" font-family="monospace" font-size="12">10100101 10010110 01101001</text>
+    <text x="400" y="750" font-family="monospace" font-size="12">10010110 01101001 10100101</text>
+    <text x="1100" y="850" font-family="monospace" font-size="12">01101001 10100101 10010110</text>
+  </g>
+  
+  <!-- 数字雨效果 -->
+  <g opacity="0.3">
+    <rect x="350" y="100" width="2" height="100" fill="url(#digitalRain)"/>
+    <rect x="650" y="200" width="2" height="150" fill="url(#digitalRain)"/>
+    <rect x="950" y="150" width="2" height="120" fill="url(#digitalRain)"/>
+    <rect x="1250" y="250" width="2" height="180" fill="url(#digitalRain)"/>
+    <rect x="400" y="400" width="2" height="130" fill="url(#digitalRain)"/>
+    <rect x="700" y="500" width="2" height="160" fill="url(#digitalRain)"/>
+    <rect x="1000" y="450" width="2" height="140" fill="url(#digitalRain)"/>
+    <rect x="1300" y="550" width="2" height="170" fill="url(#digitalRain)"/>
+  </g>
+  
+  <!-- 抽象几何形状 - 更明亮 -->
+  <g opacity="0.5" filter="url(#glow)">
+    <polygon points="720,300 750,330 720,360 690,330" fill="#18FFFF" stroke="#00E5FF" stroke-width="1"/>
+    <polygon points="720,500 760,540 720,580 680,540" fill="#00E5FF" stroke="#18FFFF" stroke-width="1"/>
+    <polygon points="720,700 770,750 720,800 670,750" fill="#18FFFF" stroke="#00E5FF" stroke-width="1"/>
+  </g>
+  
+  <!-- 中央大型科技元素 -->
+  <g opacity="0.7" transform="translate(720, 512)">
+    <circle cx="0" cy="0" r="80" fill="none" stroke="#00E5FF" stroke-width="2" stroke-dasharray="5,10"/>
+    <circle cx="0" cy="0" r="60" fill="none" stroke="#18FFFF" stroke-width="1.5"/>
+    <polygon points="0,-70 60,0 0,70 -60,0" fill="none" stroke="#64FFDA" stroke-width="2"/>
+  </g>
+  
+  <!-- 装饰性粒子 - 更明亮 -->
+  <g filter="url(#glow)">
+    <circle cx="200" cy="100" r="3" fill="#FFFFFF" opacity="0.9"/>
+    <circle cx="400" cy="300" r="2" fill="#FFFFFF" opacity="0.8"/>
+    <circle cx="600" cy="150" r="3" fill="#FFFFFF" opacity="0.9"/>
+    <circle cx="800" cy="350" r="2" fill="#FFFFFF" opacity="0.8"/>
+    <circle cx="1000" cy="200" r="3" fill="#FFFFFF" opacity="0.9"/>
+    <circle cx="1200" cy="400" r="2" fill="#FFFFFF" opacity="0.8"/>
+    <circle cx="250" cy="500" r="3" fill="#FFFFFF" opacity="0.9"/>
+    <circle cx="450" cy="700" r="2" fill="#FFFFFF" opacity="0.8"/>
+    <circle cx="650" cy="550" r="3" fill="#FFFFFF" opacity="0.9"/>
+    <circle cx="850" cy="750" r="2" fill="#FFFFFF" opacity="0.8"/>
+    <circle cx="1050" cy="600" r="3" fill="#FFFFFF" opacity="0.9"/>
+    <circle cx="1250" cy="800" r="2" fill="#FFFFFF" opacity="0.8"/>
+    
+    <!-- 额外的亮点 -->
+    <circle cx="350" cy="200" r="1.5" fill="#FFFFFF" opacity="0.7"/>
+    <circle cx="550" cy="400" r="1" fill="#FFFFFF" opacity="0.6"/>
+    <circle cx="750" cy="250" r="1.5" fill="#FFFFFF" opacity="0.7"/>
+    <circle cx="950" cy="450" r="1" fill="#FFFFFF" opacity="0.6"/>
+    <circle cx="1150" cy="300" r="1.5" fill="#FFFFFF" opacity="0.7"/>
+    <circle cx="1350" cy="500" r="1" fill="#FFFFFF" opacity="0.6"/>
+    <circle cx="300" cy="600" r="1.5" fill="#FFFFFF" opacity="0.7"/>
+    <circle cx="500" cy="800" r="1" fill="#FFFFFF" opacity="0.6"/>
+    <circle cx="700" cy="650" r="1.5" fill="#FFFFFF" opacity="0.7"/>
+    <circle cx="900" cy="850" r="1" fill="#FFFFFF" opacity="0.6"/>
+    <circle cx="1100" cy="700" r="1.5" fill="#FFFFFF" opacity="0.7"/>
+    <circle cx="1300" cy="900" r="1" fill="#FFFFFF" opacity="0.6"/>
+  </g>
+</svg> 
